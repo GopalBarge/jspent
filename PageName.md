@@ -1,0 +1,23 @@
+# Introduction #
+
+Add your content here.
+
+
+# Details #
+
+Add your content here.  Format your content with:
+  * Create a table in your embedded database : Use following DDL
+> `
+CREATE TABLE EXPENSES (
+> ID INTEGER DEFAULT AUTOINCREMENT: start 1 increment 1 NOT NULL GENERATED ALWAYS AS IDENTITY  (START WITH 1 ,INCREMENT BY 41),
+> CATEGORY VARCHAR(30),
+> SUBCATEGORY VARCHAR(30),
+> EXPENSEDATE DATE,
+> AMOUNT DOUBLE,
+> NOTES VARCHAR(30)
+> );
+
+CREATE UNIQUE INDEX SQL070925045700200 ON EXPENSES (null);
+
+ALTER TABLE EXPENSES ADD CONSTRAINT SQL070925045700200 PRIMARY KEY (ID);
+`
